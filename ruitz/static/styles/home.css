@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Merriweather+Sans&display=swap');
+
+
+*{
+    background-color: aliceblue;
+    padding: 0;
+    margin: 0;
+    border: #860000 solid 2px;
+}
+
+/*-----header-----*/
+.Fondo_1{
+    background-image: url(../img/Fondo_1.svg);
+}
+
+.Fondo_2{
+    background-image: url(../img/Fondo_2.svg);
+}
+
+.Fondo_3{
+    background-image: url(../img/Fondo_3.png);
+}
+
+.Fondo_4{
+    background-image: url(../img/Fondo_4.svg);
+}
+
+.Fondo_5{
+    background-image: url(../img/Fondo_5.svg);
+}
+
+.Fondo_6{
+    background-image: url(../img/Fondo_6.svg);
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: 200px;
+}
+
+.caja_empresa{
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    background-color: #333;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    z-index: 1000;
+    transition: top .3s ease-in-out;
+}
+
+nav.navbarDown{
+    top: 0;
+}
+
+.movimiento{
+    border: none;
+    background-color: transparent;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-in-out;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}        
+
+.logo_principal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion{
+    width: 100vw;
+    height: 80vh;
+}
+
+.caja_frase{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.caja_imagen{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+@media (max-width: 600px) {
+
+    .caja_empresa{
+        width: 40vh;
+        height: 40vh;
+        margin-top: 5vh;
+    }
+    .logo_principal{
+
+    }
+    .caja_menu{
+        margin-top: 30px;
+        width: 70%;
+        height: 50px;
+    }
+
+    .presentacion{
+
+    }
+    .section_1{
+        background-image: url(../img/Fondo_1.svg);
+        background-attachment: fixed;   
+        background-size: 200px;
+    }
+    .section_2{
+        background-image: url(../img/Fondo_6.svg);
+        background-attachment: fixed;
+        background-size: 200px;
+
+    }
+
+    .section_3{
+        background-image: url(../img/Fondo_4.svg);
+        background-attachment: fixed;
+        background-size: 200px;
+
+
+    }
+    .presentacion h1{
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;
+            color: #363636;
+            text-align: left;
+            letter-spacing: 2px;
+            margin: 0;
+            padding: 20px;
+
+    }
+    .presentacion .caja_frase{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border: #860000 solid 2px;
+    }
+
+    .presentacion .caja_imagen{
+        display: none;
+    }
+
+    footer{
+        background-color: #860000;
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+        z-index: 10000;
+    }
+    
+}
+
+@media (min-width: 600px) {
+
+    .caja_empresa{
+        width: 70vh;
+        height: 70vh;
+        margin-top: 5vh;
+        
+    }
+
+
+
+    .logo_principal{
+        font-size: 32vw;
+        font-family: 'Italianno', cursive;
+        font-weight: 100px;
+        padding-right: 70px;
+    }
+
+    .caja_menu{
+        margin-top: 70px;
+        width: 70%;
+        height: 70px;
+    }
+
+    .presentacion{
+        display: grid;
+        grid-template-columns:1fr 10fr 2fr 10fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .presentacion .caja_frase{
+        width: 100%;
+        height: 100%;
+        background-color: aquamarine;
+    }
+    
+    .presentacion .caja_imagen{
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+    }
+    .section_1 .caja_frase{
+        grid-column: 2/4;
+        grid-row: 1/4;
+    }
+
+    .section_1 .caja_imagen{
+        grid-row: 1/4;
+        grid-column: 4;
+    }
+    .section_2 .caja_frase{
+        grid-column: 3/5;
+        grid-row: 1/4;
+    }
+
+    .section_2 .caja_imagen{
+        grid-row: 1/4;
+        grid-column: 2;
+    }
+
+    .section_3 .caja_imagen{
+        grid-column: 4;
+        grid-row: 1/4;
+    }
+
+    .section_3 .caja_frase{
+        grid-row: 1/4;
+        grid-column: 2/4;
+    }
+    .presentacion h1{
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;
+            color: #363636;
+            text-align: left;
+            letter-spacing: 2px;
+            margin: 0;
+            padding: 20px;
+
+    }
+    .presentacion div{
+        width: 70%;
+        height: 100%;
+
+    }
+    .presentacion .caja_imagen{
+        background-color: aqua;
+    }
+
+    .caja_imagen{
+        background-color: aqua;
+    }
+
+    footer{
+        background-color: #860000;
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+        z-index: 10000;
+    }
+}

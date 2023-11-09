@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+aside{
+    width: 245px;
+}
+.div-filtro {
+    position: fixed ;
+    background-color: azure; /* Color del aside */
+    width: 200px;
+    padding: 20px;
+    border: #333 solid 2px;
+    box-shadow: #333 3px 3px;
+}
+
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    z-index: 1000;
+    transition: top .3s ease-in-out;
+}
+
+.agrupador{
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+.contenedor-tajetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Muestra hasta 3 tarjetas por fila, con un mínimo de 300px por tarjeta */
+    gap: 30px; /* Aumenta la separación entre las tarjetas */
+    max-width: 70vw; /* Límite máximo para el contenedor de tarjetas */
+}
+
+.tarjeta {
+    margin-bottom: 20px;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #333;
+    box-shadow: #333 5px 5px;
+    transition: all 0.5s;
+    background-color: azure;
+}
+
+.tarjeta:hover {
+    box-shadow: #333 10px 10px;
+    transform: scale(1.07);
+    transition: all 0.5s;
+}
+
+.tarjeta p {
+    margin: auto 35px;
+    text-align: center;
+}
+
+.tarjeta span {
+    margin-top: auto;
+    margin-bottom: 15px; /* Aumenta la separación inferior */
+    font-size: larger;
+}
+
+.tarjeta-imagen {
+    border: 2px #333 solid;
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+    background-size: cover; /* Ajusta la imagen para cubrir el div sin distorsionar */
+    background-position: center; /* Centra la imagen en el div */
+}
+
+.tarjeta-imagen-img {
+    border: red solid 2px;
+    width: 50%; /* Asegura que la imagen llene completamente el contenedor */
+    height: 100%; /* Asegura que la imagen llene completamente el contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto y recorta para ajustar al cuadrado */
+}
+
+
+/* Estilo para los checkboxes dentro de .filtro */
+.filtro input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Estilo para los checkboxes en :hover */
+.filtro input[type="checkbox"]:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para los checkboxes en :active */
+.filtro input[type="checkbox"]:active {
+    background-color: #ccc;
+}
+
+/* Estilo para los checkboxes en :focus */
+.filtro input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los spans dentro de .filtro */
+.filtro span {
+    font-size: 12px;
+    color: #000;
+}

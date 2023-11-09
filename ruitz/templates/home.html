@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{%block head%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/home.css' %}">
+
+    <title>Document</title>
+{% endblock %}
+{% block content %}
+    <header class="Fondo_3" id="Header">
+        <nav class="navbar" id="navDown">
+        </nav>
+        <div class="caja_empresa" >
+            <div class="movimiento" id="logoContainer">
+                <div class="logo_principal">Ritz</div>
+            </div>
+        </div>
+
+        <div class="caja_menu">
+
+        </div>
+    </header>
+    <main>
+        <section class="section_1 presentacion" id="Presentacion1">
+            <div class="caja_frase">
+                <h1>
+                    Viste a tu manera 
+                </h1>
+            </div>
+            <div class="caja_imagen">
+        
+            </div>
+        </section>
+        <section class="section_2 presentacion" id="Presentacion2" >
+            <div class="caja_frase">
+                <h1>
+                    No hay reglas
+                    solo tu estilo
+                </h1>
+            </div>
+            <div class="caja_imagen">
+
+            </div>
+        </section>
+        <section class="section_3 presentacion" id="Presentacion3" >
+            <div class="caja_frase">
+                <h1>
+                    Explora toda nuestra <a href="">coleccion</a> de ropa
+                </h1>
+            </div>
+            <div class="caja_imagen">
+
+            </div>
+        </section>
+    </main>
+    <script src="{% static '/javascript/home.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/indumentaria.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <title>Tienda de Ropa</title>
+{% endblock %}
+        
+{% block content %}
+    <div class='agrupador'>
+
+
+
+        
+        <div class="contenedor-tajetas">
+            {% for producto in productos %}
+                <div class="tarjeta">
+                    <div class="tarjeta-imagen" style="background-image: url('{{ producto.imagen }}'); ">
+                        <img class="tarjeta-imagen-img" src="{{ producto.imagen }}" alt="Producto">
+                    </div>
+                    <h2>{{ producto.nombre }}</h2>
+                    <p>{{ producto.descripcion }}</p>
+                    <span>{{ producto.precio }}$</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+        

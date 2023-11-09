@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="20mm"
+   viewBox="0 0 50 20"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="Fondo_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     width="100mm"
+     inkscape:zoom="5.786981"
+     inkscape:cx="8.5536828"
+     inkscape:cy="11.577712"
+     inkscape:window-width="1920"
+     inkscape:window-height="999"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;stroke-width:0.132592"
+       id="rect846"
+       width="54.44746"
+       height="23.062578"
+       x="-2.2993195"
+       y="-1.5244524" />
+    <g
+       id="g58073"
+       transform="translate(-0.5982837,1.5471615)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.6453px;line-height:1.25;font-family:Sawasdee;-inkscape-font-specification:'Sawasdee Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.566132"
+         x="8.7084064"
+         y="16.688408"
+         id="text2422"
+         transform="scale(0.96198246,1.03952)"><tspan
+           sodipodi:role="line"
+           id="tspan2420"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sawasdee;-inkscape-font-specification:'Sawasdee Bold';fill:#ffffff;stroke-width:0.566132"
+           x="8.7084064"
+           y="16.688408">RITZ</tspan></text>
+      <rect
+         style="fill:#d40000;stroke-width:0.264583"
+         id="rect57934"
+         width="5"
+         height="5"
+         x="2.1775064"
+         y="12.326311" />
+    </g>
+    <rect
+       style="fill:#ff5555;stroke-width:0.400079"
+       id="rect1616"
+       width="5"
+       height="11.43244"
+       x="1.5945358"
+       y="1.5395184" />
+  </g>
+</svg>
