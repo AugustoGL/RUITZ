@@ -20,16 +20,7 @@ aside{
     box-shadow: #333 3px 3px;
 }
 
-.navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100px;
-    z-index: 1000;
-    transition: top .3s ease-in-out;
-}
+
 
 .agrupador{
     margin-top: 200px;

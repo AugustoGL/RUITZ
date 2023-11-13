@@ -52,17 +52,11 @@ header{
 }
 
 .navbar{
-    background-color: #333;
     position: fixed;
     top: -100px;
-    left: 0;
-    width: 100vw;
-    height: 100px;
-    z-index: 1000;
-    transition: top .3s ease-in-out;
 }
 
-nav.navbarDown{
+.navbarDown{
     top: 0;
 }
 

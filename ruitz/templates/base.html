@@ -15,8 +15,11 @@
     <nav class="navbar" id="navDown">
         <form method="get" action="{% url 'home' %}">
             {% csrf_token %}
-            <input type="text" placeholder="buscador" name="buscador" value="{{ request.GET.buscador }}">
-            <button type="submit">Buscar</button>
+            <div class="buscador">            
+                <input type="text" placeholder="Buscador" name="buscador" value="{{ request.GET.buscador }}">
+                <button type="submit">Buscar</button>
+            </div>
+
         </form>
         
     </nav>
