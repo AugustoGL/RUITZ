@@ -6,15 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/styles/indumentaria.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    
     <title>Tienda de Ropa</title>
 {% endblock %}
         
 {% block content %}
+<form method="GET" action="{% url 'indumentaria' %}" style="text-align: center; margin-top: 220px; z-index: 1000">
+    {% csrf_token %}
+    <h3>Filtrar por colores:</h3>
+    {% for color in colores %}
+        <input type="checkbox" name="colores" value="{{ color.id }}" {% if color.id|stringformat:"s" in colores_seleccionados %}checked{% endif %}>
+        {{ color.nombre }}<br>
+    {% endfor %}
+
+    <h3>Filtrar por categorías:</h3>
+    {% for categoria in categorias %}
+        <input type="checkbox" name="categorias" value="{{ categoria.id }}" {% if categoria.id|stringformat:"s" in categorias_seleccionadas %}checked{% endif %}>
+        {{ categoria.nombre }}<br>
+    {% endfor %}
+
+    <h3>Filtrar por talles:</h3>
+    {% for talle in talles %}
+        <input type="checkbox" name="talles" value="{{ talle.id }}" {% if talle.id|stringformat:"s" in talles_seleccionados %}checked{% endif %}>
+        {{ talle.nombre }}<br>
+    {% endfor %}
+
+    <input type="submit" value="Filtrar">
+</form>
+
     <div class='agrupador'>
-
-
-
-        
         <div class="contenedor-tajetas">
             {% for producto in productos %}
                 <div class="tarjeta">
