@@ -3,10 +3,8 @@
 
 
 *{
-    background-color: aliceblue;
     padding: 0;
     margin: 0;
-    border: #860000 solid 2px;
 }
 
 /*-----header-----*/
@@ -52,17 +50,11 @@ header{
 }
 
 .navbar{
-    background-color: #333;
     position: fixed;
     top: -100px;
-    left: 0;
-    width: 100vw;
-    height: 100px;
-    z-index: 1000;
-    transition: top .3s ease-in-out;
 }
 
-nav.navbarDown{
+.navbarDown{
     top: 0;
 }
 
@@ -106,6 +98,13 @@ nav.navbarDown{
     height: 100%;
     background-color: aqua;
 }
+.caja_menu{
+    margin-top: 30px;
+    width: 70%;
+    height: 50px;
+    background-color: blue;
+}
+
 @media (max-width: 600px) {
 
     .caja_empresa{
@@ -114,7 +113,7 @@ nav.navbarDown{
         margin-top: 5vh;
     }
     .logo_principal{
-
+        background-color: transparent;
     }
     .caja_menu{
         margin-top: 30px;
@@ -123,7 +122,7 @@ nav.navbarDown{
     }
 
     .presentacion{
-
+        background-color: transparent;
     }
     .section_1{
         background-image: url(../img/Fondo_1.svg);

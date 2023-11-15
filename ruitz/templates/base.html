@@ -4,19 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
     <title>Document</title>
     {% block head %}
 
 
     {% endblock %}
-    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
+
 </head>
 <body>
     <nav class="navbar" id="navDown">
         <form method="get" action="{% url 'home' %}">
             {% csrf_token %}
-            <input type="text" placeholder="buscador" name="buscador" value="{{ request.GET.buscador }}">
-            <button type="submit">Buscar</button>
+            <div class="buscador">            
+                <input type="text" placeholder="Buscador" name="buscador" value="{{ request.GET.buscador }}">
+                <button type="submit" class="material-symbols-outlined">
+                    search
+                    </button>
+            </div>
+
         </form>
         
     </nav>
