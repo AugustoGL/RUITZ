@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/indumentaria.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+{% endblock %}
+
+{% block content %}
+    <div class='agrupador'>
+        <div class="imagenes">
+            
+        </div>
+        <img src="{% static 'path/to/product/image.jpg' %}" alt="Product Image">
+        <div class="informacion">
+            <h1>{{ producto.nombre }}</h1>
+            <h2>{{ producto.descripcion }}</h2>
+            <p>Precio: {{ producto.precio }}</p>
+            <div class="selects">
+                <select name="talle" id="talle">
+                    <!-- Opciones de talles -->
+                    {% for talle in talles %}
+                        <option value="{{ talle.id }}">{{ talle.nombre }}</option>
+                    {% endfor %}
+                </select>
+                <select name="color" id="color">
+                    <!-- Opciones de colores -->
+                    {% for color in colores %}
+                        <option value="{{ color.id }}">{{ color.nombre }}</option>
+                    {% endfor %}
+                </select>
+                <input type="number" name="cantidad" id="cantidad" value="1" min="1">
+            </div>
+            <div class="redes">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="indumentaria">
+        <!-- Contenido de la clase indumentaria -->
+    </div>
+{% endblock %}

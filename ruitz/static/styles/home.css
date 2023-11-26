@@ -107,18 +107,12 @@ header{
         height: 40vh;
         margin-top: 5vh;
     }
-    .logo_principal{
-
-    }
     .caja_menu{
         margin-top: 30px;
         width: 70%;
         height: 50px;
     }
 
-    .presentacion{
-
-    }
     .section_1{
         background-image: url(../img/Fondo_1.svg);
         background-attachment: fixed;   
