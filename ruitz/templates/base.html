@@ -9,7 +9,7 @@
 
 
     {% endblock %}
-    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
+
 </head>
 <body>
     <nav class="navbar" id="navDown">
@@ -17,7 +17,9 @@
             {% csrf_token %}
             <div class="buscador">            
                 <input type="text" placeholder="Buscador" name="buscador" value="{{ request.GET.buscador }}">
-                <button type="submit">Buscar</button>
+                <button type="submit" class="material-symbols-outlined">
+                    search
+                    </button>
             </div>
 
         </form>

@@ -20,6 +20,8 @@
     float: right;
     background-color: rgba(240, 248, 255, 0.874);
     transition: all .15s;
+    display: flex;
+    align-items: center;
 }
 
 .buscador input{
@@ -33,7 +35,6 @@
 }
 
 .buscador input:hover{
-    border: none;
     background-color: aliceblue;
     transition: all .15s;
 
@@ -51,5 +52,19 @@
 }
 
 .buscador input::placeholder{
+    transition: all .15s;
+}
+
+.buscador button {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: all .15s;
+}
+
+.buscador button:hover {
+    background-color: aliceblue;
     transition: all .15s;
 }
