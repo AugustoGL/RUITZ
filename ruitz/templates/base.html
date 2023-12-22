@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
     <title>Ruitz</title>
     {% block head %}
 
@@ -13,13 +14,13 @@
 </head>
 <body>
     <nav class="navbar" id="navDown">
-        <form method="get" action="{% url 'home' %}">
+        <form method="get" action="{% url 'indumentaria' %}">
             {% csrf_token %}
             <div class="buscador">            
-                <input type="text" placeholder="Buscador" name="buscador" value="{{ request.GET.buscador }}">
+                <input type="text" placeholder="Buscar" name="buscador" value="{{ request.GET.buscador }}">
                 <button type="submit" class="material-symbols-outlined">
                     search
-                    </button>
+                </button>
             </div>
 
         </form>

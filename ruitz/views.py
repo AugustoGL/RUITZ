@@ -26,7 +26,6 @@ class VistaBase(View):
                 self.productos = list(productos_relacionados) + list(productos_no_relacionados)
                 self.template_name = 'indumentaria.html'
                 return self.productos
-
         return self.productos
 
     def get_context_data(self):
