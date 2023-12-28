@@ -11,7 +11,7 @@
         
 {% block content %} 
 <div class="carril">
-    <form method="GET" action="{% url 'indumentaria' %}" class="filtro  ">
+    <form method="get" action="{% url 'indumentaria' %}" class="filtro">
         {% csrf_token %}
         <h3>Filtrar por colores:</h3>
         {% for color in colores %}
@@ -37,7 +37,9 @@
         </div>
         {% endfor %}
         <br>
-        <input type="submit" value="Filtrar">
+        <button type="submit" class="submit" name="filtrar">
+            Filtrar
+        </button>
     </form>
 </div>
 

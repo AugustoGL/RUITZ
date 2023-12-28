@@ -1,10 +1,9 @@
 from django.views import View
 from django.shortcuts import render, get_object_or_404
-from .models import Producto, Tamaño, Color, Categoria
+from .models import *
 from django.db.models import Q
 
 class VistaBase(View):
-    template_name = 'home.html'
 
     def __init__(self):
         super().__init__()
@@ -12,6 +11,8 @@ class VistaBase(View):
         self.talles = Tamaño.objects.all()
         self.colores = Color.objects.all()
         self.categorias = Categoria.objects.all()
+        self.template_name = "Home.html"  # Definir esto en las subclases
+
 
     def buscar(self, request):
         if request.method == 'GET':
@@ -50,19 +51,44 @@ class HomeView(VistaBase):
 
 
 class IndumentariaView(VistaBase):
-    template_name = 'indumentaria.html'
+
+    def filtrar(self, request):
+        cos = request.GET.getlist('colores')
+        cas = request.GET.getlist('categorias')
+        tas = request.GET.getlist('talles')
+
+        condiciones_filtrado = Q()
+        if cos:
+            condiciones_filtrado &= Q(colores__id__in=cos)
+        if cas:
+            condiciones_filtrado &= Q(categoria__id__in=cas)
+        if tas:
+            condiciones_filtrado &= Q(tamaño__id__in=tas)
+
+        self.productos = Producto.objects.filter(condiciones_filtrado).distinct()
+
+        print(self.productos)
 
     def get(self, request):
         self.buscar(request)
+        if 'filtrar' in request.GET:
+            self.filtrar(request)   
+        self.template_name = 'indumentaria.html'
         context = self.get_context_data()
+        context.update({
+            'colores_seleccionados': request.GET.getlist('colores'),
+            'categorias_seleccionadas': request.GET.getlist('categorias'),
+            'talles_seleccionados': request.GET.getlist('talles'),
+        })
         return self.render(context)
 
 
 class ArticuloView(VistaBase):
-    template_name = 'articulo.html'
+    
 
     def get(self, request, pk):
         self.buscar(request)
+        self.template_name = 'articulo.html'
         producto = get_object_or_404(Producto, pk=pk)
         context = self.get_context_data()
         context.update({

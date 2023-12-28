@@ -116,7 +116,7 @@ aside{
     transition: all 0.3s;
 }
 
-.filtro input[type="submit"] {
+.submit {
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     font-weight: bold;
@@ -128,9 +128,14 @@ aside{
     box-shadow: #000 3px 3px;
 }
 
-.filtro input[type="submit"]:hover {
+.submit:hover {
     box-shadow: #000 5px 5px;
     transition: all 0.3s;
+}
+
+.submit:focus {
+    box-shadow: #000 1px 1px;
+    transition: all 0.15s;
 }
 /* Estilo para los spans dentro de .filtro */
 .filtro span {
